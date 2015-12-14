@@ -109,7 +109,7 @@ public class Utility {
         editor.putString("weather_desp",weatherDesp);
         editor.putString("publish_time",publicTime);
         editor.putString("current_date",sdf.format(new Date()));
-        editor.apply();// commit
+        editor.commit();// commit
     }
 
 }
