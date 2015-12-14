@@ -75,7 +75,7 @@ public class NoneWeatherDB {
     /*从数据库读取某省份下的所有城市*/
     public List<City> loadCities(int provinceId){
         List<City> list = new ArrayList<City>();
-        Cursor cursor = db.query("City",null,"provinceId=?",new String[]{String.valueOf(provinceId)},null,null,null);
+        Cursor cursor = db.query("City",null,"province_id=?",new String[]{String.valueOf(provinceId)},null,null,null);
         if(cursor.moveToFirst()){
             do{
                 City city =new City();
@@ -103,7 +103,7 @@ public class NoneWeatherDB {
     /*从数据库读取某城市下的所有县市*/
     public List<County> loadCounties(int cityId){
         List<County> list = new ArrayList<County>();
-        Cursor cursor = db.query("County",null,"cityId=?",new String[]{String.valueOf(cityId)},null,null,null);
+        Cursor cursor = db.query("County",null,"city_id=?",new String[]{String.valueOf(cityId)},null,null,null);
         if(cursor.moveToFirst()){
             do{
                 County county =new County();
